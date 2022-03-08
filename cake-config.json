@@ -1,0 +1,10 @@
+{
+  "WebsiteRoot": "C:\\inetpub\\wwwroot\\sc100.local",
+  "InstanceUrl": "https://sc100.local/",
+  "SolutionName": "MockProject.sln",
+  "ProjectFolder": "D:\\SiteCore\\SitecoreFundamental\\server",
+  "BuildConfiguration": "Debug",
+  "BuildToolVersions": "Auto",
+  "RunCleanBuilds": true,
+  "Environment": "Local"
+}

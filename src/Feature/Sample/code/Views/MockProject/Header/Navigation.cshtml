@@ -1,0 +1,37 @@
+﻿@using Glass.Mapper.Sc.Web.Mvc
+@using MockProject.Foundation.SitecoreExtensions.Extensions
+@using MockProject.Foundation.SitecoreExtensions.Helpers
+@model MockProject.Feature.Sample.Models.TemplateModels.NavigationModel
+
+<div class="nav-cate-wrapper">
+    <div class="swiper-container nav-cate">
+        <div class="button__swiper is-next"></div>
+        <div class="swiper-wrapper nav-cate-list swiper-no-swiping">
+            @*<div class="swiper-slide nav-cate-item"><a href="#"><span>news</span></a></div>
+                <div class="swiper-slide nav-cate-item"><a href="#"><span>money&biz</span></a></div>
+                <div class="swiper-slide nav-cate-item active"><a href="#"><span>looks</span></a></div>
+                <div class="swiper-slide nav-cate-item"><a href="#"><span>taste</span></a></div>
+                <div class="swiper-slide nav-cate-item"><a href="#"><span>travel</span></a></div>
+                <div class="swiper-slide nav-cate-item"><a href="#"><span>modern midlife</span></a></div>
+                <div class="swiper-slide nav-cate-item"><a href="#"><span>auto</span></a></div>
+                <div class="swiper-slide nav-cate-item"><a href="#"><span>tech&sci</span></a></div>
+                <div class="swiper-slide nav-cate-item"><a href="#"><span>tech&sci tech&sci tech&sci</span></a></div>
+                <div class="swiper-slide nav-cate-item"><a href="#"><span>tech&sci</span></a></div>*@
+            @foreach (var item in Model.Items)
+            {
+
+                <div class="swiper-slide nav-cate-item">
+
+                    @using (Html.Glass().BeginRenderLink(item, x => x.Link, isEditable: true))
+                    {
+                        <span>
+                            @Html.Glass().Editable(item, x => x.Title)
+                        </span>
+                    }
+
+                </div>
+            }
+        </div>
+        <div class="button__swiper is-prev"></div>
+    </div>
+</div>
